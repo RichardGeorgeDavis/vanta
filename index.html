@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vanta.js | Animated 3D Backgrounds for the Web</title>
+  <meta
+    name="description"
+    content="Showcase animated WebGL backgrounds with live Vanta.js effects, quick-start code, and a gallery of motion-driven website backdrops."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vanta.js | Animated 3D Backgrounds for the Web">
+  <meta
+    property="og:description"
+    content="Explore live Vanta.js effects, installation patterns, and customizable backgrounds for modern landing pages."
+  >
+  <meta property="og:image" content="https://www.vantajs.com/gallery/fb-share-image.jpg">
+  <meta name="theme-color" content="#07111d">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./site.css">
+
+  <script defer src="./vendor/three.r134.min.js"></script>
+  <script defer src="./vendor/p5.min.js"></script>
+  <script defer src="./dist/vanta.halo.min.js"></script>
+  <script defer src="./dist/vanta.waves.min.js"></script>
+  <script defer src="./dist/vanta.globe.min.js"></script>
+  <script defer src="./dist/vanta.net.min.js"></script>
+  <script defer src="./dist/vanta.fog.min.js"></script>
+  <script defer src="./dist/vanta.dots.min.js"></script>
+  <script defer src="./dist/vanta.rings.min.js"></script>
+  <script defer src="./dist/vanta.cells.min.js"></script>
+  <script defer src="./dist/vanta.clouds.min.js"></script>
+  <script defer src="./dist/vanta.clouds2.min.js"></script>
+  <script defer src="./dist/vanta.ripple.min.js"></script>
+  <script defer src="./dist/vanta.birds.min.js"></script>
+  <script defer src="./dist/vanta.topology.min.js"></script>
+  <script defer src="./dist/vanta.trunk.min.js"></script>
+  <script defer src="./site.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Vanta home">
+        <span class="brand-mark">V</span>
+        <span class="brand-copy">
+          <strong>Vanta.js</strong>
+          <span>Animated backgrounds</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#showcase">Showcase</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/tengbao/vanta" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero reveal" id="top">
+        <div class="hero-stage" id="hero-stage" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Animated WebGL backgrounds for modern websites</p>
+            <h1>Make a static page feel cinematic in a few lines of code.</h1>
+            <p class="hero-lead">
+              Vanta drops interactive motion behind any element, so marketing pages, launch screens,
+              portfolios, and docs land with more atmosphere and less asset weight.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#showcase">Browse live effects</a>
+              <a class="button button-secondary" href="#install">See install pattern</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Highlights">
+              <li>
+                <strong>14 effects</strong>
+                <span>from subtle waves to dense networks</span>
+              </li>
+              <li>
+                <strong>Brandable</strong>
+                <span>tune color, speed, scale, and interaction</span>
+              </li>
+              <li>
+                <strong>Framework friendly</strong>
+                <span>use with vanilla JS, React, Vue, or Angular</span>
+              </li>
+            </ul>
+
+            <div class="hero-switcher" aria-label="Hero effect picker">
+              <span class="switcher-label">Preview:</span>
+              <button type="button" class="effect-pill is-active" data-hero-effect="HALO">Halo</button>
+              <button type="button" class="effect-pill" data-hero-effect="TRUNK">Trunks</button>
+              <button type="button" class="effect-pill" data-hero-effect="GLOBE">Globe</button>
+              <button type="button" class="effect-pill" data-hero-effect="NET">Net</button>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-card">
+              <p class="panel-kicker">Current hero effect</p>
+              <h2 id="hero-effect-name">Halo</h2>
+              <p id="hero-effect-note">
+                Diffused color rings for bold launches, AI products, and product storytelling.
+              </p>
+            </div>
+
+            <div class="panel-card panel-code">
+              <p class="panel-kicker">Quick start</p>
+              <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+VANTA.WAVES({
+  el: "#hero",
+  color: 0x0f766e
+})
+&lt;/script&gt;</code></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section reveal" id="showcase">
+        <div class="section-heading">
+          <p class="eyebrow">Showcase</p>
+          <h2>All local effect bundles, shown as live previews.</h2>
+          <p>
+            Every effect shipped in `dist/` is represented here. On smaller screens and reduced-motion setups,
+            the page keeps the same gallery structure but falls back to static color treatments instead of forcing
+            heavy animation.
+          </p>
+        </div>
+
+        <div class="effect-grid">
+          <article class="effect-card effect-card-wide reveal">
+            <div class="effect-stage effect-stage-waves" data-preview-effect="waves" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / cinematic / soft light</span>
+              <h3>Waves</h3>
+              <p>For polished SaaS heroes, pricing pages, and dark product intros.</p>
+            </div>
+          </article>
+
+          <article class="effect-card effect-card-wide reveal">
+            <div class="effect-stage effect-stage-clouds" data-preview-effect="clouds" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / airy / bright</span>
+              <h3>Clouds</h3>
+              <p>For lighter brand systems, event pages, and product launches with more lift.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-halo" data-preview-effect="halo" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / luminous / bold</span>
+              <h3>Halo</h3>
+              <p>Diffused rings and color bloom for punchier hero sections.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-globe" data-preview-effect="globe" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / spatial / connected</span>
+              <h3>Globe</h3>
+              <p>Useful when you want a networked, global, or infrastructure feel.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-net" data-preview-effect="net" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / connected / technical</span>
+              <h3>Net</h3>
+              <p>Dense linework for developer tools, dashboards, and product surfaces.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-fog" data-preview-effect="fog" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / atmospheric / abstract</span>
+              <h3>Fog</h3>
+              <p>Builds mood fast without introducing literal imagery.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-dots" data-preview-effect="dots" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / grid / precise</span>
+              <h3>Dots</h3>
+              <p>A sharper, more technical backdrop for docs and developer tools.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-cells" data-preview-effect="cells" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / organic / electric</span>
+              <h3>Cells</h3>
+              <p>A brighter, more biological texture for experimental brand work.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-rings" data-preview-effect="rings" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / bold / layered</span>
+              <h3>Rings</h3>
+              <p>Works when a page needs more drama than a flat gradient can give.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-clouds2" data-preview-effect="clouds2" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / volumetric / dreamy</span>
+              <h3>Clouds 2</h3>
+              <p>A denser sky treatment with more depth and a stronger painted feel.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-ripple" data-preview-effect="ripple" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">shader / bright / kinetic</span>
+              <h3>Ripple</h3>
+              <p>High-energy concentric light for splashy promos and launch moments.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-birds" data-preview-effect="birds" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">three.js / flocking / energetic</span>
+              <h3>Birds</h3>
+              <p>Fast-moving boids for pages that need more motion and more spectacle.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-topology" data-preview-effect="topology" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">p5.js / generative / flowing</span>
+              <h3>Topology</h3>
+              <p>Fine particle lines that feel drawn, mathematical, and handcrafted.</p>
+            </div>
+          </article>
+
+          <article class="effect-card reveal">
+            <div class="effect-stage effect-stage-trunk" data-preview-effect="trunk" aria-hidden="true"></div>
+            <div class="effect-content">
+              <span class="effect-meta">p5.js / concentric / organic</span>
+              <h3>Trunk</h3>
+              <p>Animated contour rings that land somewhere between woodgrain and signal art.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-install reveal" id="install">
+        <div class="section-heading">
+          <p class="eyebrow">Install</p>
+          <h2>Use one effect at a time, tune it hard, and let the content stay readable.</h2>
+          <p>
+            Vanta works best as a background layer behind focused foreground content. Treat it like production design,
+            not wallpaper.
+          </p>
+        </div>
+
+        <div class="install-grid">
+          <div class="text-card">
+            <h3>Why teams reach for it</h3>
+            <ul class="feature-list">
+              <li>Interactive motion without shipping a background video.</li>
+              <li>Color controls that can track a product palette instead of fighting it.</li>
+              <li>A simple `destroy()` lifecycle for component-based apps.</li>
+              <li>Enough range to cover dark, light, technical, and experimental brand systems.</li>
+            </ul>
+          </div>
+
+          <div class="code-stack">
+            <div class="code-card">
+              <p class="panel-kicker">CDN pattern</p>
+              <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+VANTA.NET({
+  el: "#network",
+  color: 0x7ce2d8,
+  backgroundColor: 0x07111d,
+  points: 12,
+  maxDistance: 22
+})
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="code-card">
+              <p class="panel-kicker">Runtime updates</p>
+              <pre><code>const effect = VANTA.HALO({
+  el: "#hero",
+  baseColor: 0x12213d,
+  color2: 0xf5c25d
+})
+
+effect.setOptions({
+  color2: 0x79a8ff,
+  size: 1.2
+})
+
+effect.destroy()</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-principles reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Principles</p>
+          <h2>Use motion with intent.</h2>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle-card">
+            <h3>Lead with contrast</h3>
+            <p>Foreground type should still win. Pair strong motion with restrained copy widths and darker scrims.</p>
+          </article>
+          <article class="principle-card">
+            <h3>Match the product tone</h3>
+            <p>Choose effects that reinforce the brand: precise, ambient, optimistic, or technical.</p>
+          </article>
+          <article class="principle-card">
+            <h3>Respect device limits</h3>
+            <p>Provide static fallbacks for reduced-motion users and smaller screens where dense WebGL is a bad trade.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Vanta.js is an open source project for animated website backgrounds.</p>
+      <div class="footer-links">
+        <a href="https://github.com/tengbao/vanta" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.npmjs.com/package/vanta" target="_blank" rel="noreferrer">npm</a>
+        <a href="https://github.com/tengbao/vanta/blob/master/README.md" target="_blank" rel="noreferrer">README</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
