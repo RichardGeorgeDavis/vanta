@@ -1,5 +1,9 @@
 # Vanta JS
 
+<!-- workspace-hub:cover:start -->
+![vanta cover](cover.png)
+<!-- workspace-hub:cover:end -->
+
 ## [View demo gallery & customize effects at www.vantajs.com &rarr;](https://www.vantajs.com)
 
 [![alt text](https://www.vantajs.com/gallery/vanta-preview.gif "Vanta JS")](https://www.vantajs.com)
